@@ -12,6 +12,35 @@ html {
 }
 
 
+.logo-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0 20px 0;
+}
+
+.logo {
+    width: 200px;
+}
+
+.input-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+    height: 50px;
+    padding-left: 15%;
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.801);
+}
+
 .primary-btn {
         background-image: linear-gradient($color-secondary, $color-primary);
         color: white;
@@ -71,7 +100,9 @@ html {
 }
 
 .card-bottom {
-    height: 60px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .card-text {
@@ -79,8 +110,24 @@ html {
     color: black;
 }
 
+.card-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-heart {
+    padding: 0px 15px 0px 15px;
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 h3 {
-    margin-top: 15px;
+    margin-top: 0px;
+    padding-top: 10px;
     margin-bottom: 0%;
 }
 

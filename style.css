@@ -2,6 +2,47 @@ html {
   font-family: Roboto, Arial;
 }
 
+.logo-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.logo {
+  width: 200px;
+}
+
+.input-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d6d6d6;
+  height: 50px;
+  padding-left: 15%;
+}
+
+input {
+  background-color: transparent;
+  border: none;
+  padding-left: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.801);
+}
+
 .primary-btn {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background-image: linear-gradient(#FF79DA, #9356DC);
@@ -80,7 +121,13 @@ html {
 }
 
 .card-bottom {
-  height: 60px;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .card-text {
@@ -88,8 +135,31 @@ html {
   color: black;
 }
 
+.card-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fa-heart {
+  padding: 0px 15px 0px 15px;
+  color: transparent;
+  background-clip: text;
+  background: -webkit-gradient(linear, left top, right top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to right, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 h3 {
-  margin-top: 15px;
+  margin-top: 0px;
+  padding-top: 10px;
   margin-bottom: 0%;
 }
 
