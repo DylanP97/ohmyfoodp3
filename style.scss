@@ -1,0 +1,117 @@
+$color-primary: #9356DC;
+
+$color-secondary: #FF79DA;
+
+$color-tertiary: #99E2D0;
+
+
+
+
+html {
+    font-family: Roboto, Arial;
+}
+
+
+.primary-btn {
+        background-image: linear-gradient($color-secondary, $color-primary);
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: Roboto, 'Open Sans', sans-serif;
+        border-radius: 40px;
+        border: 0px;
+        padding: 15px 25px 15px 25px;
+}
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(231, 231, 231);
+    width: 100%;
+    padding: 50px 10px 30px 10px;
+}
+
+.all-cards {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+.card {
+    width: fit-content;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+
+.card-top {
+    position: relative;
+    height: 200px;
+}
+
+.img-card {
+    height: 200px;
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $color-tertiary;
+    color: #1c7a64;
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.card-bottom {
+    height: 60px;
+}
+
+.card-text {
+    padding-left: 20px;
+    color: black;
+}
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 0%;
+}
+
+p {
+    margin-top: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(71, 71, 71);
+    padding: 30px 20px 20px 20px;
+    color: white;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+li {
+    list-style-type: none;
+}
+
+.iconfooter {
+    list-style-type: style type;
+}
+
+  /* Media Queries Smartphone */
+  @media screen and (max-width: 768px) {
+
+
+  }
