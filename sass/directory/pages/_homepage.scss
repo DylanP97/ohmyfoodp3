@@ -1,0 +1,211 @@
+@use "sass:color";
+
+
+.input-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: #e9e9e9f3;
+    height: 60px;
+    -webkit-box-shadow: inset 0px 10px 13px -10px rgba(0,0,0,0.7); 
+    box-shadow: inset 0px 10px 13px -10px rgba(0,0,0,0.7);
+  }
+  
+  
+  .fa-location-dot {
+      transform: scale(1.3);
+  }
+  
+  
+  input {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.801);
+    width: 250px;
+    text-align: center;
+    height: 100%;
+  }
+  
+  .intro-part {
+      background-color: rgb(243, 243, 243);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 40px 70px 40px;
+      font-kerning: auto;
+  }
+  
+  h1 {
+      margin: 0px;
+      font-size: 24px;
+  }
+  
+  .intro-part p {
+      font-weight: 400;
+      color: rgba(61, 61, 61, 0.712);
+  }
+
+
+
+
+  /*Fonctionnement*/
+
+.fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 10px 20px 20px;
+}
+
+.all-tabs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.circle-number {
+  background-color: #9356DC;
+  border-radius: 80px;
+  width: 30px;
+  height: 30px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: -15px;
+}
+
+.circle-number p {
+  margin: 0px 0px 0px 0px;
+  color: white;
+}
+
+.tab-encadré {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    margin: 10px 0px 10px 0px;
+    border-radius: 20px;
+    padding: 10px 0 10px 40px;
+    width: 100%;
+}
+
+.tab-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+}
+
+.tab i {
+    transform: scale(1.3);
+}
+
+.tab-text {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+
+
+/*Restaurants*/
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    padding: 50px 0px 30px 0px;
+}
+
+.restaurantstitle {
+    width: 350px;
+}
+
+.all-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: fit-content;
+    max-height: 270px;
+    width: 350px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+
+    & p {
+        margin-top: 5px;
+    }
+}
+
+.card-top {
+    position: relative;
+    height: 200px;
+    width: 100%;
+}
+
+.img-card {
+    max-height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.nouveau {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $color-tertiary;
+    color: #1c7a64;
+    font-weight: 500;
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.card-bottom {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-text {
+    padding-left: 20px;
+    color: black;
+}
+
+.card-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

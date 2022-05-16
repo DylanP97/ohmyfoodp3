@@ -1,0 +1,98 @@
+@use "sass:color";
+
+
+/* General */
+
+html {
+    font-family: Roboto, Arial;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+  
+/* Logo */
+
+.logo-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 15px 0 15px 0;
+  }
+
+.logo {
+    width: 200px;
+}
+
+/* Content */
+
+.primary-btn {
+    background-image: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Roboto, 'Open Sans', sans-serif;
+    border-radius: 40px;
+    border: 0px;
+    padding: 15px 25px 15px 25px;
+}
+
+
+
+.fa-heart {
+    padding: 0px 15px 0px 15px;
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(to right, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+h3 {
+    margin-top: 0px;
+    padding-top: 10px;
+    margin-bottom: 0%;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Footer */
+
+
+footer {
+    background-color: rgb(71, 71, 71);
+    padding: 30px 20px 20px 20px;
+    color: white;
+}
+
+.footer-logo {
+    width: 120px;
+}
+
+li {
+    list-style: none;
+}
+
+.iconfooter {
+    list-style-type: style type;
+}
+
+
+
+/* Media Queries Smartphone */
+@media screen and (max-width: 768px) {
+
+
+}

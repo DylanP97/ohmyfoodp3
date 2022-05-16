@@ -1,4 +1,6 @@
+@charset "UTF-8";
 /* Colors */
+@use "sass:color";
 /* General */
 html {
   font-family: Roboto, Arial;
@@ -9,7 +11,7 @@ body {
   padding: 0;
 }
 
-/* Header */
+/* Logo */
 .logo-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,6 +29,60 @@ body {
   width: 200px;
 }
 
+/* Content */
+.primary-btn {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Roboto, 'Open Sans', sans-serif;
+  border-radius: 40px;
+  border: 0px;
+  padding: 15px 25px 15px 25px;
+}
+
+.fa-heart {
+  padding: 0px 15px 0px 15px;
+  color: transparent;
+  background-clip: text;
+  background: -webkit-gradient(linear, left top, right top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to right, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h3 {
+  margin-top: 0px;
+  padding-top: 10px;
+  margin-bottom: 0%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #474747;
+  padding: 30px 20px 20px 20px;
+  color: white;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+li {
+  list-style: none;
+}
+
+.iconfooter {
+  list-style-type: style type;
+}
+
+/* Media Queries Smartphone */
+@use "sass:color";
 .input-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -75,7 +131,7 @@ input {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 40px;
+  padding: 40px 40px 70px 40px;
   -webkit-font-kerning: auto;
           font-kerning: auto;
 }
@@ -90,18 +146,6 @@ h1 {
   color: rgba(61, 61, 61, 0.712);
 }
 
-.primary-btn {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  font-family: Roboto, 'Open Sans', sans-serif;
-  border-radius: 40px;
-  border: 0px;
-  padding: 15px 25px 15px 25px;
-}
-
 /*Fonctionnement*/
 .fonctionnement {
   display: -webkit-box;
@@ -111,13 +155,10 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.title-fonctionnement {
-  width: 350px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px 10px 20px 20px;
 }
 
 .all-tabs {
@@ -128,7 +169,7 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 20px 0 20px;
+  width: 100%;
 }
 
 .tab {
@@ -142,19 +183,15 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #f3f3f3;
-  margin: 10px 15px 10px 15px;
-  border-radius: 20px;
-  padding: 5px 0 5px 0;
+  position: relative;
 }
 
 .circle-number {
   background-color: #9356DC;
-  border-radius: 50px;
-  width: 20px;
-  height: 20px;
+  border-radius: 80px;
+  width: 30px;
+  height: 30px;
   padding: 0px;
-  margin-right: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,12 +201,30 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: absolute;
+  left: -15px;
 }
 
 .circle-number p {
   margin: 0px 0px 0px 0px;
   color: white;
-  font-size: smaller;
+}
+
+.tab-encadré {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f3f3f3;
+  margin: 10px 0px 10px 0px;
+  border-radius: 20px;
+  padding: 10px 0 10px 40px;
+  width: 100%;
 }
 
 .tab-icon {
@@ -192,6 +247,8 @@ h1 {
 
 .tab-text {
   margin-left: 20px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 /*Restaurants*/
@@ -304,44 +361,4 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
 }
-
-.fa-heart {
-  padding: 0px 15px 0px 15px;
-  color: transparent;
-  background-clip: text;
-  background: -webkit-gradient(linear, left top, right top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to right, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h3 {
-  margin-top: 0px;
-  padding-top: 10px;
-  margin-bottom: 0%;
-}
-
-a {
-  text-decoration: none;
-}
-
-footer {
-  background-color: #474747;
-  padding: 30px 20px 20px 20px;
-  color: white;
-}
-
-.footer-logo {
-  width: 120px;
-}
-
-li {
-  list-style-type: none;
-}
-
-.iconfooter {
-  list-style-type: style type;
-}
-
-/* Media Queries Smartphone */
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */
