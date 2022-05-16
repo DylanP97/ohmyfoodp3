@@ -48,16 +48,6 @@ body {
   padding: 15px 25px 15px 25px;
 }
 
-.fa-heart {
-  padding: 0px 15px 0px 15px;
-  color: transparent;
-  background-clip: text;
-  background: -webkit-gradient(linear, left top, right top, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(to right, #9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 h3 {
   margin-top: 0px;
   padding-top: 10px;
@@ -66,6 +56,64 @@ h3 {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+/* Heart Button */
+.fa-heart {
+  cursor: pointer;
+}
+
+.card-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: inherit;
+  padding: 0px 15px 0px 15px;
+}
+
+.card-button {
+  border: 0px;
+  background-color: inherit;
+  padding: 0px;
+}
+
+.card-button:hover .card-like--bg {
+  color: transparent;
+  background-clip: text;
+  background: -webkit-gradient(linear, right top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.card-button:hover .card-like--noBg {
+  display: none;
+  position: absolute;
+}
+
+.card-like--noBg {
+  position: relative;
+  color: black;
+  background-color: inherit;
+  padding: 0px;
+}
+
+.card-like--bg {
+  position: absolute;
+  display: none;
+  padding: 0px;
 }
 
 /* Footer */
@@ -85,6 +133,11 @@ li {
 
 .iconfooter {
   list-style-type: style type;
+}
+
+footer li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Media Queries Smartphone */
@@ -228,7 +281,7 @@ h1 {
           align-items: center;
   background-color: #f3f3f3;
   margin: 10px 0px 10px 0px;
-  border-radius: 20px;
+  border-radius: 30px;
   padding: 10px 0 10px 40px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.215);
@@ -236,7 +289,11 @@ h1 {
 }
 
 .tab-encadré:hover {
-  background-color: soft-color;
+  background-color: #f2eafb;
+}
+
+.tab-encadré:hover i {
+  color: #9356DC;
 }
 
 .tab-icon {
@@ -250,6 +307,10 @@ h1 {
       -ms-flex-align: center;
           align-items: center;
   width: 20px;
+}
+
+.tab-icon i {
+  color: #969696;
 }
 
 .tab i {
@@ -355,6 +416,9 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: inherit;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .card-text {
@@ -372,6 +436,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom-right-radius: 20px;
 }
 
 @use "sass:color";
@@ -401,14 +466,30 @@ h1 {
 
 .menu-main {
   background-color: #f3f3f3;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
   padding: 30px;
   position: relative;
-  top: -30px;
+  top: -40px;
 }
 
 .main-grey {
   background-color: #f3f3f3;
+}
+
+.menu-header {
+  background-color: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-title {
+  font-family: Shrikhand, Roboto, Arial;
+  font-size: 26px;
+  font-weight: 400;
 }
 /*# sourceMappingURL=main.css.map */

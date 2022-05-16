@@ -104,16 +104,19 @@
     align-items: center;
     background-color: rgb(243, 243, 243);
     margin: 10px 0px 10px 0px;
-    border-radius: 20px;
+    border-radius: 30px;
     padding: 10px 0 10px 40px;
     width: 100%;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.215);
 
     &:hover {
-        @include soft-hover;
+        background-color: lighten($color-primary, 35%);
+
+        & i {
+            color: $color-primary;
+        }
     }
 }
-
 
 
 .tab-icon {
@@ -121,6 +124,10 @@
     justify-content: center;
     align-items: center;
     width: 20px;
+
+    & i {
+        color: rgb(150, 150, 150);
+    }
 }
 
 .tab i {
@@ -204,6 +211,9 @@
     height: 70px;
     display: flex;
     justify-content: space-between;
+    background-color: inherit;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 .card-text {
@@ -215,4 +225,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom-right-radius: 20px;
+
 }

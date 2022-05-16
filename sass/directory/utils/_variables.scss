@@ -8,5 +8,14 @@ $color-tertiary: #99E2D0;
 
 
 @mixin soft-hover{
-  background-color: soft-color;
+  background-color: $color-tertiary;
+}
+
+
+@mixin heart-color-hover {
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(to bottom left, $color-primary, $color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

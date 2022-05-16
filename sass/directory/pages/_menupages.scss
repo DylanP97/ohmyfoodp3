@@ -24,13 +24,25 @@
 
 .menu-main {
     background-color: rgb(243, 243, 243);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
     padding: 30px;
     position: relative;
-    top: -30px;
+    top: -40px;
 }
 
 .main-grey {
     background-color: rgb(243, 243, 243);
+}
+
+.menu-header {
+    background-color: inherit;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-title {
+    font-family: Shrikhand, Roboto, Arial;
+    font-size: 26px;
+    font-weight: 400;
 }

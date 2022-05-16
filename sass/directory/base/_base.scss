@@ -42,18 +42,6 @@ body {
     padding: 15px 25px 15px 25px;
 }
 
-
-
-.fa-heart {
-    padding: 0px 15px 0px 15px;
-    color: transparent;
-    background-clip: text;
-    background: linear-gradient(to right, $color-primary, $color-secondary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-
 h3 {
     margin-top: 0px;
     padding-top: 10px;
@@ -62,7 +50,57 @@ h3 {
 
 a {
     text-decoration: none;
+    color: black;
 }
+
+
+
+/* Heart Button */
+
+.fa-heart {
+    cursor: pointer;
+}
+
+.card-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: inherit;
+    padding: 0px 15px 0px 15px;
+}
+
+.card-button {
+    border: 0px;
+    background-color: inherit;
+    padding: 0px;
+    &:hover {
+        .card-like--bg {
+            @include heart-color-hover;
+            position: relative;
+        }
+        .card-like--noBg {
+            display: none;
+            position: absolute;
+        }
+    }    
+}
+
+.card-like--noBg {
+    position: relative;
+    color: black;
+    background-color: inherit;
+    padding: 0px;
+}
+
+.card-like--bg {
+    position: absolute;
+    display: none;
+    padding: 0px;
+}
+
+
+
 
 
 /* Footer */
@@ -86,7 +124,10 @@ li {
     list-style-type: style type;
 }
 
-
+footer li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 /* Media Queries Smartphone */
 @media screen and (max-width: 768px) {
