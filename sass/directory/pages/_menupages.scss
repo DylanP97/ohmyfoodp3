@@ -1,0 +1,36 @@
+@use "sass:color";
+
+
+.go-back {
+    width: 25px;
+    position: absolute;
+    left: 20px;
+}
+
+.fa-arrow-left {
+    transform: scale(1.4);
+}
+
+.diapo-part {
+    width: 100%;
+}
+
+.diapo-img {
+    max-height: 350px;
+    width: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.menu-main {
+    background-color: rgb(243, 243, 243);
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 30px;
+    position: relative;
+    top: -30px;
+}
+
+.main-grey {
+    background-color: rgb(243, 243, 243);
+}

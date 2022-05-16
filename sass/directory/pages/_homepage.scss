@@ -107,7 +107,14 @@
     border-radius: 20px;
     padding: 10px 0 10px 40px;
     width: 100%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.215);
+
+    &:hover {
+        @include soft-hover;
+    }
 }
+
+
 
 .tab-icon {
     display: flex;

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Oh My Food! - Menu - Le Délice des Sens</title>
     
     <!--Meta Elements-->
 	<meta charset="UTF-8"/>
     <meta name= "viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="title" content="Oh My Food! - Menu - Le Délice des Sens">
     <meta name="description" content="Découvrez le menu du restaurant Le Délice des Sens">
 
     <!--Fichiers CSS-->
-	<link rel="stylesheet" href=".css">
+	<link rel="stylesheet" href="./sass/directory/main.css">
     <link rel="stylesheet/scss" href="normalize.css">    
 
     <!--GoogleFonts-->
@@ -28,159 +28,159 @@
     <!--Header-->
     <header>
         <div class="logo-row">
-            <div>
-                <img class="icon-goback" src="" alt="">
+            <div class="go-back">
+                <i class="fa-solid fa-arrow-left"></i>
             </div>
-            <div>
-                <img src="content/images/logo/ohmyfood.png" alt="" class="logo">
-            </div>
+            <img src="content/images/logo/ohmyfood.png" alt="Oh My Food! Logo" class="logo">
         </div>
-        <div class="img-diapo">
-            <img class="diapo-ledelicedessens" src="/content/images/restaurants/folie-méricourt.jpg" alt="">
+        <div class="diapo-part">
+            <img class="diapo-img" src="/content/images/restaurants/folie-méricourt.jpg" alt="">
         </div>
     </header>
-    <main>
-        <div class="page-title">
-            <h1>Le délice des sens</h1>
-            <div class="card-heart">
-                <img class="heart-icon" src="" alt="">
-            </div>
-        </div>
-        <!--Menus (Entrées, Plats, Desserts)-->            
-        <section class="menu-bloc">
-            <div class="menu-title">
-                <h2>Entrées</h2>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Tartare de thon</h3>
-                    <p>Assaisonné au yuzu</p>
-                </div>
-                <div class="card-price">
-                    <p>25€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
+    <main class="main-grey">
+        <div class="menu-main">
+            <div class="page-title">
+                <h1>Le délice des sens</h1>
+                <div class="card-heart">
+                    <img class="heart-icon" src="" alt="">
                 </div>
             </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Bouchée de homard croustillant</h3>
-                    <p>Et sa farandole de petits légumes</p>
+            <!--Menus (Entrées, Plats, Desserts)-->            
+            <section class="menu-bloc">
+                <div class="menu-title">
+                    <h2>Entrées</h2>
                 </div>
-                <div class="card-price">
-                    <p>35€</p>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Tartare de thon</h3>
+                        <p>Assaisonné au yuzu</p>
+                    </div>
+                    <div class="card-price">
+                        <p>25€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
                 </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Bouchée de homard croustillant</h3>
+                        <p>Et sa farandole de petits légumes</p>
+                    </div>
+                    <div class="card-price">
+                        <p>35€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
                 </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Velouté de cèpes</h3>
+                        <p>Aux truffes</p>
+                    </div>
+                    <div class="card-price">
+                        <p>20€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>                        
+            </section>
+            <section class="menu-bloc">
+                <div class="menu-title">
+                    <h2>Plats</h2>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Poulet rôti aux herbes de provence</h3>
+                        <p>Et sa crème de truffe</p>
+                    </div>
+                    <div class="card-price">
+                        <p>40€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Langoustine rôtie</h3>
+                        <p>Et ses légumes de saison</p>
+                    </div>
+                    <div class="card-price">
+                        <p>35€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Côte de boeuf angus</h3>
+                        <p>Et sa purée de panais</p>
+                    </div>
+                    <div class="card-price">
+                        <p>44€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>            
+            </section>
+            <section class="menu-bloc">
+                <div class="menu-title">
+                    <h2>Desserts</h2>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Farandole de desserts</h3>
+                        <p>Du chef</p>
+                    </div>
+                    <div class="card-price">
+                        <p>18€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Crème brulée</h3>
+                        <p>Revisitée</p>
+                    </div>
+                    <div class="card-price">
+                        <p>22€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>
+                <div class="menu-card">
+                    <div class="card-text">
+                        <h3>Tiramisu</h3>
+                        <p>À la noisette</p>
+                    </div>
+                    <div class="card-price">
+                        <p>23€</p>
+                    </div>
+                    <div class="card-validation">
+                        <img class="icon-check" src="" alt="">
+                    </div>
+                </div>            
+            </section>
+            <div class="btn-page">
+                <button class="primary-btn">Commander</button>
             </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Velouté de cèpes</h3>
-                    <p>Aux truffes</p>
-                </div>
-                <div class="card-price">
-                    <p>20€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>                        
-        </section>
-        <section class="menu-bloc">
-            <div class="menu-title">
-                <h2>Plats</h2>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Poulet rôti aux herbes de provence</h3>
-                    <p>Et sa crème de truffe</p>
-                </div>
-                <div class="card-price">
-                    <p>40€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Langoustine rôtie</h3>
-                    <p>Et ses légumes de saison</p>
-                </div>
-                <div class="card-price">
-                    <p>35€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Côte de boeuf angus</h3>
-                    <p>Et sa purée de panais</p>
-                </div>
-                <div class="card-price">
-                    <p>44€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>            
-        </section>
-        <section class="menu-bloc">
-            <div class="menu-title">
-                <h2>Desserts</h2>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Farandole de desserts</h3>
-                    <p>Du chef</p>
-                </div>
-                <div class="card-price">
-                    <p>18€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Crème brulée</h3>
-                    <p>Revisitée</p>
-                </div>
-                <div class="card-price">
-                    <p>22€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>
-            <div class="menu-card">
-                <div class="card-text">
-                    <h3>Tiramisu</h3>
-                    <p>À la noisette</p>
-                </div>
-                <div class="card-price">
-                    <p>23€</p>
-                </div>
-                <div class="card-validation">
-                    <img class="icon-check" src="" alt="">
-                </div>
-            </div>            
-        </section>
-        <div class="btn-page">
-            <button class="primary-btn">Commander</button>
         </div>
     </main>
     <!--Footer-->
     <footer>
         <div class="footer-column">
-            <img class="footer-logo" src="" alt="">
-            <ul>
-                <li>Proposer un restaurant</li> <!--Ici on pourrait essayer de mettre un icon image avec la propriété CSS list-style-type-->
-                <li>Devenir partenaire</li> <!--Ici on pourrait essayer de mettre un icon image avec la propriété CSS list-style-type-->
+            <img class="footer-logo" src="content/images/logo/ohmyfood-white.png" alt="">
+            <ul class="fa-ul">
+                <li><span class="fa-li"><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</li>
+                <li><span class="fa-li"><i class="fa-solid fa-handshake-angle"></i></span>Devenir partenaire</li>
                 <li>Mentions légales</li>
                 <li>Contact</li>
             </ul>
