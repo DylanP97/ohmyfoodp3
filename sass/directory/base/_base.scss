@@ -39,7 +39,7 @@ body {
     font-family: Roboto, 'Open Sans', sans-serif;
     border-radius: 40px;
     border: 0px;
-    padding: 15px 25px 15px 25px;
+    padding: 15px 40px 15px 40px;
 }
 
 h3 {
@@ -127,10 +127,4 @@ li {
 footer li:hover {
     text-decoration: underline;
     cursor: pointer;
-}
-
-/* Media Queries Smartphone */
-@media screen and (max-width: 768px) {
-
-
 }

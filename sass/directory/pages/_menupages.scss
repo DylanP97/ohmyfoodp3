@@ -26,7 +26,7 @@
     background-color: rgb(243, 243, 243);
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    padding: 30px;
+    padding: 15px 10px 15px 10px;
     position: relative;
     top: -40px;
 }
@@ -39,10 +39,117 @@
     background-color: inherit;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
 }
 
 .menu-title {
     font-family: Shrikhand, Roboto, Arial;
     font-size: 26px;
     font-weight: 400;
+    padding-left: 10px;
+}
+
+
+.menu-subtitle {
+    text-transform: uppercase;
+    color: rgb(80, 80, 80);
+    font-size: 12px;
+    border-bottom: 4px solid $color-tertiary;
+    width: 40px;
+
+    & h2 {
+        margin-bottom: 4px;
+        font-weight: 400;
+        font-family: Roboto, Arial;
+    }
+}
+
+
+.all-menu-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu-card {
+    height: 60px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover > .card-validation {
+        display: flex;
+        cursor: pointer;
+    }
+
+    & .card-text {
+        width: calc(80%);
+        height: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 10px 0px 10px 10px;
+
+        & h3 {
+            padding-top: 0px;
+            padding-bottom: 10px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: calc(90%);
+            overflow: hidden;
+
+        }
+
+        & p {
+            margin: 0px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: calc(90%);
+            overflow: hidden;
+        }
+    }
+
+    & .card-price {
+        width: calc(20%);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    & .card-validation {
+        position: relative;
+        color: $color-tertiary;
+        background-color: $color-tertiary;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        height: inherit;
+    
+    
+        & .fa-circle-check {
+            color: #ffffff;
+            transform: scale(2);
+        }
+    }
+}
+
+
+
+.btn-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }

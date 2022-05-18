@@ -155,7 +155,7 @@
 }
 
 .restaurantstitle {
-    width: 350px;
+    width: 90%;
 }
 
 .all-cards {
@@ -169,7 +169,8 @@
 .card {
     height: fit-content;
     max-height: 270px;
-    width: 350px;
+    width: 90%;
+    min-width: 350px;
     background-color: #ffffff;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -227,4 +228,20 @@
     align-items: center;
     border-bottom-right-radius: 20px;
 
+}
+
+
+/* Media Queries Desktops */
+@media screen and (min-width: 1024px) {
+    .all-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 100%;
+        justify-items: center;
+    }
+
+    .card {
+        min-width: 350px;
+        width: 80%;
+    }
 }
