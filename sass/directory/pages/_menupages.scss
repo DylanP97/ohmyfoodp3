@@ -58,7 +58,7 @@
     border-bottom: 4px solid $color-tertiary;
     width: 40px;
 
-    & h2 {
+    h2 {
         margin-bottom: 4px;
         font-weight: 400;
         font-family: Roboto, Arial;
@@ -73,77 +73,101 @@
     justify-content: center;
     align-items: center;
     margin-top: 20px;
-}
 
-.menu-card {
-    height: 60px;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-
-    &:hover > .card-validation {
+    .menu-card {
+        height: 60px;
+        width: 100%;
+        background-color: #ffffff;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
         display: flex;
-        cursor: pointer;
-    }
-
-    & .card-text {
-        width: calc(80%);
-        height: inherit;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 10px 0px 10px 10px;
-
-        & h3 {
-            padding-top: 0px;
-            padding-bottom: 10px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            width: calc(90%);
-            overflow: hidden;
-
-        }
-
-        & p {
-            margin: 0px;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            width: calc(90%);
-            overflow: hidden;
-        }
-    }
-
-    & .card-price {
-        width: calc(20%);
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    & .card-validation {
-        position: relative;
-        color: $color-tertiary;
-        background-color: $color-tertiary;
-        display: none;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
-        width: 20%;
-        height: inherit;
+        justify-content: space-between;
+        cursor: pointer;
     
+        &:hover {
+            .card-validation {
+                transform: scaleX(1);
+                width: 20%;
+                }
     
-        & .fa-circle-check {
-            color: #ffffff;
-            transform: scale(2);
+                .fa-circle-check {
+                transform: scale(2) rotate(3turn);
+                transition: transform 1000ms 600ms ease-in-out;
+                
+                }
+    
+                .card-text {
+                    width: calc(60%);
+                }
+    
+                .card-price {
+                    width: calc(10%);
+                }    
+        }   
+    
+        .card-text {
+            width: calc(80%);
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 10px 15px 10px 15px;
+            overflow: hidden;
+    
+            h3 {
+                padding-top: 0px;
+                padding-bottom: 10px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: calc(100%);
+                overflow: hidden;
+    
+            }
+    
+            p {
+                margin: 0px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                width: calc(100%);
+                overflow: hidden;
+            }
+        }
+    
+        .card-price {
+            height: 100%;
+            width: calc(20%);
+            display: flex;
+            align-items: flex-end;
+            font-weight: 700;
+            padding-right: 15px;
+        }
+    
+        .card-validation {
+            color: $color-tertiary;
+            background-color: $color-tertiary;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 0%;
+            height: inherit;
+            border-radius: 0 20px 20px 0;
+            transform: scaleX(0);
+            transition: transform 500ms;
+            transform-origin: right;
+
+        
+            .fa-circle-check {
+                color: #ffffff;
+            }
         }
     }
 }
+
+
 
 
 

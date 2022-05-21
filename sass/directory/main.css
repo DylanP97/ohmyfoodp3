@@ -46,6 +46,22 @@ body {
   border-radius: 40px;
   border: 0px;
   padding: 15px 40px 15px 40px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.primary-btn:hover {
+  -webkit-transition: background-image 1450ms, -webkit-transform 1000ms;
+  transition: background-image 1450ms, -webkit-transform 1000ms;
+  transition: background-image 1450ms, transform 1000ms;
+  transition: background-image 1450ms, transform 1000ms, -webkit-transform 1000ms;
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2);
 }
 
 h3 {
@@ -100,7 +116,6 @@ a {
 
 .card-button:hover .card-like--noBg {
   display: none;
-  position: absolute;
 }
 
 .card-like--noBg {
@@ -114,6 +129,11 @@ a {
   position: absolute;
   display: none;
   padding: 0px;
+  background: none;
+  -webkit-transition: all 2500ms;
+  transition: all 2500ms;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
 }
 
 /* Footer */
@@ -401,7 +421,7 @@ h1 {
   top: 10px;
   right: 10px;
   background-color: #99E2D0;
-  color: #1c7a64;
+  color: #2c9c81;
   font-weight: 500;
   padding: 10px 15px 10px 15px;
   border-radius: 3px;
@@ -546,7 +566,7 @@ h1 {
   margin-top: 20px;
 }
 
-.menu-card {
+.all-menu-cards .menu-card {
   height: 60px;
   width: 100%;
   background-color: #ffffff;
@@ -567,16 +587,33 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-.menu-card:hover > .card-validation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   cursor: pointer;
 }
 
-.menu-card .card-text {
+.all-menu-cards .menu-card:hover .card-validation {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  width: 20%;
+}
+
+.all-menu-cards .menu-card:hover .fa-circle-check {
+  -webkit-transform: scale(2) rotate(3turn);
+          transform: scale(2) rotate(3turn);
+  -webkit-transition: -webkit-transform 1000ms 600ms ease-in-out;
+  transition: -webkit-transform 1000ms 600ms ease-in-out;
+  transition: transform 1000ms 600ms ease-in-out;
+  transition: transform 1000ms 600ms ease-in-out, -webkit-transform 1000ms 600ms ease-in-out;
+}
+
+.all-menu-cards .menu-card:hover .card-text {
+  width: calc(60%);
+}
+
+.all-menu-cards .menu-card:hover .card-price {
+  width: calc(10%);
+}
+
+.all-menu-cards .menu-card .card-text {
   width: calc(80%);
   height: inherit;
   display: -webkit-box;
@@ -592,58 +629,67 @@ h1 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  padding: 10px 0px 10px 10px;
+  padding: 10px 15px 10px 15px;
+  overflow: hidden;
 }
 
-.menu-card .card-text h3 {
+.all-menu-cards .menu-card .card-text h3 {
   padding-top: 0px;
   padding-bottom: 10px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(90%);
+  width: calc(100%);
   overflow: hidden;
 }
 
-.menu-card .card-text p {
+.all-menu-cards .menu-card .card-text p {
   margin: 0px;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: calc(90%);
+  width: calc(100%);
   overflow: hidden;
 }
 
-.menu-card .card-price {
+.all-menu-cards .menu-card .card-price {
+  height: 100%;
   width: calc(20%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-weight: 700;
+  padding-right: 15px;
+}
+
+.all-menu-cards .menu-card .card-validation {
+  color: #99E2D0;
+  background-color: #99E2D0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.menu-card .card-validation {
-  position: relative;
-  color: #99E2D0;
-  background-color: #99E2D0;
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20%;
+  width: 0%;
   height: inherit;
+  border-radius: 0 20px 20px 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 500ms;
+  transition: -webkit-transform 500ms;
+  transition: transform 500ms;
+  transition: transform 500ms, -webkit-transform 500ms;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
-.menu-card .card-validation .fa-circle-check {
+.all-menu-cards .menu-card .card-validation .fa-circle-check {
   color: #ffffff;
-  -webkit-transform: scale(2);
-          transform: scale(2);
 }
 
 .btn-page {
