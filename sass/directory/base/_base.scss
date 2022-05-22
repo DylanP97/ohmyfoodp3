@@ -12,6 +12,56 @@ body {
     padding: 0;
 }
 
+/* Loading Spinner */
+
+.loader {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 7;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    animation: loader;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+  
+    &__item {
+      height: 100px;
+      width: 20px;
+      border-radius: 100px;
+  
+      &Container {
+        display: flex;
+        width: 30%;
+        justify-content: space-around;
+      }
+  
+      &--1 {
+        background-color: $color-primary;
+        transform-origin: top;
+        animation: number1 1.5s linear;
+        opacity: 0;
+      }
+    
+      &--2 {
+        background-color: $color-secondary;
+        transform-origin: top;
+        animation: number2 1s 0.5s linear;
+        opacity: 0;
+      }
+    
+      &--3 {
+        background-color: $color-tertiary;
+        transform-origin: top;
+        animation: number3 0.5s 1s linear;
+        opacity: 0;
+      }
+    }
+  
+    
+}
   
 /* Logo */
 
@@ -44,10 +94,10 @@ body {
 
     &:hover {
         transition: background-image 1450ms, transform 1000ms;
-        transform: scale(1.13);
         filter: brightness(110%);
         cursor: pointer;
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, .2);
+        outline: $color-tertiary 3px outset;
     }
 }
 
@@ -65,6 +115,7 @@ a {
 
 
 /* Heart Button */
+
 .fa-heart {
     cursor: pointer;
 }
@@ -80,34 +131,39 @@ a {
 
 .card-button {
     border: 0px;
-    background-color: inherit;
+    background-color: transparent;
     padding: 0px;
+    z-index: 1;
+
 
     &:hover {
         .card-like--bg {
-            @include heart-color-hover;
-            position: relative;
+            animation: heartfill 1s linear;
+            animation-fill-mode: forwards;
         }
         .card-like--noBg {
-            display: none;
+            background-color: inherit;
         }
     }    
 }
 
 .card-like--noBg {
     position: relative;
-    color: black;
     background-color: inherit;
+    color: black;
     padding: 0px;
+    z-index: 3;
 }
 
 .card-like--bg {
     position: absolute;
-    display: none;
     padding: 0px;
-    background: none;
+    z-index: 2;
+    transform: scale(0);
     transition: all 2500ms;
-    transform-origin: bottom;
+    transform-origin: 50% 90%;
+    @include heart-color-hover;
+
 }
 
 
@@ -126,15 +182,23 @@ footer {
     width: 120px;
 }
 
-li {
-    list-style: none;
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 10px;
+
+    & i {
+        margin-right: 10px;
+    }
 }
 
-.iconfooter {
-    list-style-type: style type;
-}
+footer a {
+    color: white;
 
-footer li:hover {
+    &:hover {
     text-decoration: underline;
     cursor: pointer;
+    }
 }
