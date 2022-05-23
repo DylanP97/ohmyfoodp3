@@ -25,6 +25,8 @@
         
 </head>
 <body>
+
+    <!--Loading Spinner-->    
     <div class="loader">
         <div class="loader__itemContainer">
           <div class="loader__item loader__item--1"></div>
@@ -36,7 +38,7 @@
     <!--Header-->
     <header>
         <div class="logo-row">
-            <img src="content/images/logo/ohmyfood.png" alt="Oh My Food! Logo" class="logo">
+            <img src="content/images/logo/ohmyfood.png" alt="Oh My Food! Logo" class="logo-row__logo">
         </div>
         <div class="input-row">
             <i class="fa-solid fa-location-dot"></i>
@@ -45,53 +47,47 @@
         <div class="intro-part">
             <h1>Réservez le menu qui vous convient</h1>
             <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-            <div class="btn-part">
-                <button href="#restaurants" class="primary-btn">Explorer nos restaurants</button>
-            </div>
+            <button href="#restaurants" class="primary-btn">Explorer nos restaurants</button>
         </div>
     </header>
+
+    <!--Main-->    
     <main>
         <!--Fonctionnement-->
         <section class="fonctionnement">
-            <div class="title-fonctionnement">
+            <div class="fonctionnement__title">
                 <h2>Fonctionnement</h2>
             </div>
-            <div class="all-tabs">
+            <div class="fonctionnement__all-tabs">
                 <div class="tab">
-                    <div class="circle-number">
-                        <p>1</p>
-                    </div>
-                    <div class="tab-encadré">
-                        <div class="tab-icon">
-                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    <div class="tab__circle-number"><p>1</p></div>
+                    <div class="tab__encadré">
+                        <div class="tab__icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
                         </div>
-                        <div class="tab-text">
+                        <div class="tab__text">
                             <p>Choisissez un restaurant</p>
                         </div>
                     </div>
                 </div>
                 <div class="tab">
-                    <div class="circle-number">
-                        <p>2</p>
-                    </div>
-                    <div class="tab-encadré">
-                        <div class="tab-icon">
-                        <i class="fa-solid fa-list"></i>
+                    <div class="tab__circle-number"><p>2</p></div>
+                    <div class="tab__encadré">
+                        <div class="tab__icon">
+                            <i class="fa-solid fa-list"></i>
                         </div>
-                        <div class="tab-text">
+                        <div class="tab__text">
                             <p>Composez votre menu</p>
                         </div>
                     </div>
                 </div>
                 <div class="tab">
-                    <div class="circle-number">
-                        <p>3</p>
-                    </div>
-                    <div class="tab-encadré">
-                        <div class="tab-icon">
-                        <i class="fa-solid fa-store"></i>
+                    <div class="tab__circle-number"><p>3</p></div>
+                    <div class="tab__encadré">
+                        <div class="tab__icon">
+                            <i class="fa-solid fa-store"></i>
                         </div>
-                        <div class="tab-text">
+                        <div class="tab__text">
                             <p>Dégustez au restaurant</p>
                         </div>
                     </div>
@@ -100,14 +96,14 @@
         </section>
         <!--Restaurants-->
         <section class="restaurants">
-            <div class="restaurantstitle">
+            <div class="restaurants__title">
                 <h2>Restaurants</h2>
             </div>
-            <div class="all-cards">
+            <div class="restaurants__all-cards">
                 <a href="/lapalettedugoût.html" class="card">
                     <div class="card-top">
-                        <img class="img-card" src="/content/images/restaurants/menilmontant.jpg" alt="">
-                        <p class="nouveau">Nouveau</p>
+                        <img class="card-top__img-card" src="/content/images/restaurants/menilmontant.jpg" alt="La Palette du Goût">
+                        <p class="card-top__nouveau">Nouveau</p>
                     </div>
                     <div class="card-bottom">
                         <div class="card-text">
@@ -115,7 +111,7 @@
                             <p>Ménilmontant</p>
                         </div>
                         <div class="card-heart">
-                            <button class="card-button">
+                            <button class="card-like">
                                 <i class="card-like--bg fas fa-heart fa-2x"></i>
                                 <i class="card-like--noBg far fa-heart fa-2x"></i>
                             </button>
@@ -124,8 +120,8 @@
                 </a>
                 <a href="/lanoteenchantée.html" class="card">
                     <div class="card-top">
-                        <img class="img-card" src="/content/images/restaurants/charonne.jpg" alt="">
-                        <p class="nouveau">Nouveau</p>
+                        <img class="card-top__img-card" src="/content/images/restaurants/charonne.jpg" alt="La Note Enchantée">
+                        <p class="card-top__nouveau">Nouveau</p>
                     </div>
                     <div class="card-bottom">
                         <div class="card-text">
@@ -133,7 +129,7 @@
                             <p>Charonne</p>
                         </div>
                         <div class="card-heart">
-                            <button class="card-button">
+                            <button class="card-like">
                                 <i class="card-like--bg fas fa-heart fa-2x"></i>
                                 <i class="card-like--noBg far fa-heart fa-2x"></i>
                             </button>
@@ -142,7 +138,7 @@
                 </a>
                 <a href="/alafrançaise.html" class="card">
                     <div class="card-top">
-                        <img class="img-card" src="/content/images/restaurants/citérouge.jpg" alt="">
+                        <img class="card-top__img-card" src="/content/images/restaurants/citérouge.jpg" alt="La Cité Rouge">
                     </div>
                     <div class="card-bottom">
                         <div class="card-text">
@@ -150,7 +146,7 @@
                             <p>Cité Rouge</p>
                         </div>
                         <div class="card-heart">
-                            <button class="card-button">
+                            <button class="card-like">
                                 <i class="card-like--bg fas fa-heart fa-2x"></i>
                                 <i class="card-like--noBg far fa-heart fa-2x"></i>
                             </button>
@@ -159,7 +155,7 @@
                 </a>
                 <a href="/ledélicedessens.html" class="card">
                     <div class="card-top">
-                        <img class="img-card" src="/content/images/restaurants/folie-méricourt.jpg" alt="">
+                        <img class="card-top__img-card" src="/content/images/restaurants/folie-méricourt.jpg" alt="Le Délice des Sens">
                     </div>
                     <div class="card-bottom">
                         <div class="card-text">
@@ -167,7 +163,7 @@
                             <p>Folie-Méricourt</p>
                         </div>
                         <div class="card-heart">
-                            <button class="card-button">
+                            <button class="card-like">
                                 <i class="card-like--bg fas fa-heart fa-2x"></i>
                                 <i class="card-like--noBg far fa-heart fa-2x"></i>
                             </button>
@@ -179,15 +175,13 @@
     </main>
     <!--Footer-->
     <footer>
-        <div class="footer-column">
-            <img class="footer-logo" src="content/images/logo/ohmyfood-white.png" alt="Logo Oh My Food!">
-            <nav class="footer-nav">
-                <a><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
-                <a><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
-                <a>Mentions légales</a>
-                <a>Contact</a>
-            </nav>
-        </div>
+        <img class="footer__logo" src="content/images/logo/ohmyfood-white.png" alt="Logo Oh My Food!">
+        <nav class="footer__nav">
+            <a><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+            <a><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+            <a>Mentions légales</a>
+            <a>Contact</a>
+        </nav>
     </footer>
 </body>
 

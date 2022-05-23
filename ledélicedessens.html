@@ -26,6 +26,7 @@
 </head>
 <body>
 
+    <!--Loading Spinner-->    
     <div class="loader">
         <div class="loader__itemContainer">
           <div class="loader__item loader__item--1"></div>
@@ -37,21 +38,23 @@
     <!--Header-->
     <header>
         <div class="logo-row">
-            <div class="go-back">
+            <div class="logo-row__go-back">
                 <a href="/accueil.html"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
-            <img src="content/images/logo/ohmyfood.png" alt="Oh My Food! Logo" class="logo">
+            <img src="content/images/logo/ohmyfood.png" alt="Oh My Food! Logo" class="logo-row__logo">
         </div>
-        <div class="diapo-part">
-            <img class="diapo-img" src="/content/images/restaurants/folie-méricourt.jpg" alt="">
+        <div class="diapo">
+            <img class="diapo__img" src="/content/images/restaurants/folie-méricourt.jpg" alt="Le Délice des Sens">
         </div>
     </header>
-    <main class="main-grey">
+
+    <!--Main-->    
+    <main class="main">
         <div class="menu-main">
             <div class="menu-header" >
                 <h1 class="menu-title">Le délice des sens</h1>
                 <div class="card-heart">
-                    <button class="card-button">
+                    <button class="card-like">
                         <i class="card-like--bg fas fa-heart fa-2x"></i>
                         <i class="card-like--noBg far fa-heart fa-2x"></i>
                     </button>
@@ -196,15 +199,13 @@
     </main>
     <!--Footer-->
     <footer>
-        <div class="footer-column">
-            <img class="footer-logo" src="content/images/logo/ohmyfood-white.png" alt="">
-            <ul class="fa-ul">
-                <li><span class="fa-li"><i class="fa-solid fa-utensils"></i></span>Proposer un restaurant</li>
-                <li><span class="fa-li"><i class="fa-solid fa-handshake-angle"></i></span>Devenir partenaire</li>
-                <li>Mentions légales</li>
-                <li>Contact</li>
-            </ul>
-        </div>
+        <img class="footer__logo" src="content/images/logo/ohmyfood-white.png" alt="Logo Oh My Food!">
+        <nav class="footer__nav">
+            <a><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+            <a><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
+            <a>Mentions légales</a>
+            <a>Contact</a>
+        </nav>
     </footer>
 </body>
 

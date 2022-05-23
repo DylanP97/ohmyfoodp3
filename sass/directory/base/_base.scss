@@ -63,7 +63,7 @@ body {
     
 }
   
-/* Logo */
+/* Logo Row */
 
 .logo-row {
     padding: 15px 0 15px 0;
@@ -71,12 +71,12 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
 
-.logo {
-    width: 200px;
-    position: relative;
-    top: 4px;
+    .logo-row__logo {
+        width: 200px;
+        position: relative;
+        top: 4px;
+    }
 }
 
 /* Content */
@@ -129,7 +129,7 @@ a {
     padding: 0px 15px 0px 15px;
 }
 
-.card-button {
+.card-like {
     border: 0px;
     background-color: transparent;
     padding: 0px;
@@ -144,61 +144,63 @@ a {
         .card-like--noBg {
             background-color: inherit;
         }
-    }    
+    } 
+    
+    .card-like--noBg {
+        position: relative;
+        background-color: inherit;
+        color: black;
+        padding: 0px;
+        z-index: 3;
+    }
+    
+    .card-like--bg {
+        position: absolute;
+        padding: 0px;
+        z-index: 2;
+        transform: scale(0);
+        transition: all 2500ms;
+        transform-origin: 50% 90%;
+        @include heart-color-hover;
+    }
 }
-
-.card-like--noBg {
-    position: relative;
-    background-color: inherit;
-    color: black;
-    padding: 0px;
-    z-index: 3;
-}
-
-.card-like--bg {
-    position: absolute;
-    padding: 0px;
-    z-index: 2;
-    transform: scale(0);
-    transition: all 2500ms;
-    transform-origin: 50% 90%;
-    @include heart-color-hover;
-
-}
-
 
 
 
 /* Footer */
 
-
 footer {
     background-color: rgb(71, 71, 71);
-    padding: 30px 20px 20px 20px;
+    padding: 30px 40px 30px 40px;
     color: white;
 }
 
-.footer-logo {
+.footer__logo {
     width: 120px;
+    margin-bottom: 10px;
 }
 
-.footer-nav {
+.footer__nav {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
-    margin-left: 10px;
 
-    & i {
+    & a {
+        list-style: none;
+        color: white;
+
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            }
+    }
+
+    & .fa-utensils {
         margin-right: 10px;
     }
-}
 
-footer a {
-    color: white;
-
-    &:hover {
-    text-decoration: underline;
-    cursor: pointer;
+    & .fa-handshake-angle {
+        margin-right: 4px;
     }
 }

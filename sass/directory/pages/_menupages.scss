@@ -1,7 +1,7 @@
 @use "sass:color";
 
 
-.go-back {
+.logo-row__go-back {
     width: 25px;
     position: absolute;
     left: 20px;
@@ -11,15 +11,19 @@
     transform: scale(1.4);
 }
 
-.diapo-part {
+.diapo {
     width: 100%;
 }
 
-.diapo-img {
+.diapo__img {
     max-height: 400px;
     width: inherit;
     object-fit: cover;
     object-position: center;
+}
+
+.main {
+    background-color: rgb(243, 243, 243);
 }
 
 .menu-main {
@@ -29,10 +33,6 @@
     padding: 15px 10px 15px 10px;
     position: relative;
     top: -40px;
-}
-
-.main-grey {
-    background-color: rgb(243, 243, 243);
 }
 
 .menu-header {
@@ -204,6 +204,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
+        align-items: flex-start;
     }
 }

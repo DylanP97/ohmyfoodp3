@@ -77,7 +77,7 @@ body {
   opacity: 0;
 }
 
-/* Logo */
+/* Logo Row */
 .logo-row {
   padding: 15px 0 15px 0;
   display: -webkit-box;
@@ -95,7 +95,7 @@ body {
           justify-content: center;
 }
 
-.logo {
+.logo-row .logo-row__logo {
   width: 200px;
   position: relative;
   top: 4px;
@@ -163,25 +163,25 @@ a {
   padding: 0px 15px 0px 15px;
 }
 
-.card-button {
+.card-like {
   border: 0px;
   background-color: transparent;
   padding: 0px;
   z-index: 1;
 }
 
-.card-button:hover .card-like--bg {
+.card-like:hover .card-like--bg {
   -webkit-animation: heartfill 1s linear;
           animation: heartfill 1s linear;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.card-button:hover .card-like--noBg {
+.card-like:hover .card-like--noBg {
   background-color: inherit;
 }
 
-.card-like--noBg {
+.card-like .card-like--noBg {
   position: relative;
   background-color: inherit;
   color: black;
@@ -189,7 +189,7 @@ a {
   z-index: 3;
 }
 
-.card-like--bg {
+.card-like .card-like--bg {
   position: absolute;
   padding: 0px;
   z-index: 2;
@@ -210,15 +210,16 @@ a {
 /* Footer */
 footer {
   background-color: #474747;
-  padding: 30px 20px 20px 20px;
+  padding: 30px 40px 30px 40px;
   color: white;
 }
 
-.footer-logo {
+.footer__logo {
   width: 120px;
+  margin-bottom: 10px;
 }
 
-.footer-nav {
+.footer__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,23 +233,28 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 10px;
 }
 
-.footer-nav i {
-  margin-right: 10px;
-}
-
-footer a {
+.footer__nav a {
+  list-style: none;
   color: white;
 }
 
-footer a:hover {
+.footer__nav a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
 
+.footer__nav .fa-utensils {
+  margin-right: 10px;
+}
+
+.footer__nav .fa-handshake-angle {
+  margin-right: 4px;
+}
+
 @use "sass:color";
+/* Input Row */
 .input-row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,7 +271,7 @@ footer a:hover {
           box-shadow: inset 0px 10px 13px -10px rgba(0, 0, 0, 0.7);
 }
 
-.fa-location-dot {
+.input-row .fa-location-dot {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   margin-right: 10px;
@@ -293,6 +299,7 @@ input:not(:focus):invalid {
   background: red;
 }
 
+/* Intro Part */
 .intro-part {
   background-color: #f3f3f3;
   display: -webkit-box;
@@ -309,12 +316,12 @@ input:not(:focus):invalid {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  padding: 40px 40px 70px 40px;
+  padding: 40px 40px 40px 40px;
   -webkit-font-kerning: auto;
           font-kerning: auto;
 }
 
-h1 {
+.intro-part h1 {
   margin: 0px;
   font-size: 24px;
 }
@@ -324,7 +331,7 @@ h1 {
   color: rgba(61, 61, 61, 0.712);
 }
 
-/*Fonctionnement*/
+/* Fonctionnement */
 .fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -339,7 +346,7 @@ h1 {
   margin: 20px 10px 20px 20px;
 }
 
-.all-tabs {
+.fonctionnement__all-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -364,7 +371,7 @@ h1 {
   position: relative;
 }
 
-.circle-number {
+.tab__circle-number {
   background-color: #9356DC;
   border-radius: 80px;
   width: 30px;
@@ -383,12 +390,12 @@ h1 {
   left: -15px;
 }
 
-.circle-number p {
+.tab__circle-number p {
   margin: 0px 0px 0px 0px;
   color: white;
 }
 
-.tab-encadré {
+.tab__encadré {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,15 +414,15 @@ h1 {
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.215);
 }
 
-.tab-encadré:hover {
+.tab__encadré:hover {
   background-color: #f2eafb;
 }
 
-.tab-encadré:hover i {
+.tab__encadré:hover i {
   color: #9356DC;
 }
 
-.tab-icon {
+.tab__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -428,22 +435,19 @@ h1 {
   width: 20px;
 }
 
-.tab-icon i {
+.tab__icon i {
   color: #969696;
-}
-
-.tab i {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
 }
 
-.tab-text {
+.tab__text {
   margin-left: 20px;
   font-weight: 500;
   font-size: 18px;
 }
 
-/*Restaurants*/
+/* Restaurants */
 .restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,11 +464,11 @@ h1 {
   padding: 50px 0px 30px 0px;
 }
 
-.restaurantstitle {
+.restaurants__title {
   width: 90%;
 }
 
-.all-cards {
+.restaurants__all-cards {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -505,7 +509,7 @@ h1 {
   width: 100%;
 }
 
-.img-card {
+.card-top .card-top__img-card {
   max-height: 200px;
   width: 100%;
   -o-object-fit: cover;
@@ -516,7 +520,7 @@ h1 {
   border-top-right-radius: 20px;
 }
 
-.nouveau {
+.card-top .card-top__nouveau {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -561,7 +565,7 @@ h1 {
 
 /* Media Queries Desktops */
 @media screen and (min-width: 1024px) {
-  .all-cards {
+  .restaurants__all-cards {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -576,7 +580,7 @@ h1 {
 }
 
 @use "sass:color";
-.go-back {
+.logo-row__go-back {
   width: 25px;
   position: absolute;
   left: 20px;
@@ -587,17 +591,21 @@ h1 {
           transform: scale(1.4);
 }
 
-.diapo-part {
+.diapo {
   width: 100%;
 }
 
-.diapo-img {
+.diapo__img {
   max-height: 400px;
   width: inherit;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.main {
+  background-color: #f3f3f3;
 }
 
 .menu-main {
@@ -607,10 +615,6 @@ h1 {
   padding: 15px 10px 15px 10px;
   position: relative;
   top: -40px;
-}
-
-.main-grey {
-  background-color: #f3f3f3;
 }
 
 .menu-header {
@@ -844,9 +848,9 @@ h1 {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -855,9 +859,13 @@ h1 {
     -webkit-transform: scale(0%);
             transform: scale(0%);
   }
-  50% {
-    -webkit-transform: scale(50%);
-            transform: scale(50%);
+  30% {
+    -webkit-transform: scale(30%);
+            transform: scale(30%);
+  }
+  70% {
+    -webkit-transform: scale(70%);
+            transform: scale(70%);
   }
   100% {
     -webkit-transform: scale(100%);
@@ -870,9 +878,13 @@ h1 {
     -webkit-transform: scale(0%);
             transform: scale(0%);
   }
-  50% {
-    -webkit-transform: scale(50%);
-            transform: scale(50%);
+  30% {
+    -webkit-transform: scale(30%);
+            transform: scale(30%);
+  }
+  70% {
+    -webkit-transform: scale(70%);
+            transform: scale(70%);
   }
   100% {
     -webkit-transform: scale(100%);
