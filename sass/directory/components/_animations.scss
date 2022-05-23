@@ -30,6 +30,24 @@
 } 
 
 
+@keyframes cards {
+	0% {
+        transform: translateY(20px);
+		opacity: 0;
+    }
+	
+    50% {
+        transform: translateY(10px);
+		opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0px);
+		opacity: 1;
+    }
+}
+
+
 @keyframes loader {
     100% {
       opacity: 1;

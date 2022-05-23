@@ -1,4 +1,4 @@
-/* Colors */
+/* Variables */
 
 $color-primary: #9356DC;
 
@@ -8,6 +8,13 @@ $color-tertiary: #99E2D0;
 
 
 
+$num-cards: 10;
+$anim-dur: 1300ms;
+$anim-delay: $anim-dur / $num-cards;
+
+
+
+// Mixins
 
 @mixin heart-color-hover {
     color: transparent;

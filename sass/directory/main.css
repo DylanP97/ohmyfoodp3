@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* Colors */
+/* Variables */
 @use "sass:color";
 /* General */
 html {
@@ -673,7 +673,7 @@ input:not(:focus):invalid {
 .all-menu-cards .menu-card {
   height: 60px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
@@ -692,22 +692,61 @@ input:not(:focus):invalid {
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
-  opacity: 0;
-  -webkit-animation: appearance linear;
-          animation: appearance linear;
-  -webkit-animation-duration: 1000ms;
-          animation-duration: 1000ms;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-transform: translateY(100px);
-          transform: translateY(100px);
-  -webkit-transform-origin: top;
-          transform-origin: top;
+  -webkit-animation: cards 1300ms both linear;
+          animation: cards 1300ms both linear;
 }
 
-.all-menu-cards .menu-card:hover .card-validation {
+.all-menu-cards .menu-card--1 {
+  -webkit-animation-delay: 130ms;
+          animation-delay: 130ms;
+}
+
+.all-menu-cards .menu-card--2 {
+  -webkit-animation-delay: 260ms;
+          animation-delay: 260ms;
+}
+
+.all-menu-cards .menu-card--3 {
+  -webkit-animation-delay: 390ms;
+          animation-delay: 390ms;
+}
+
+.all-menu-cards .menu-card--4 {
+  -webkit-animation-delay: 520ms;
+          animation-delay: 520ms;
+}
+
+.all-menu-cards .menu-card--5 {
+  -webkit-animation-delay: 650ms;
+          animation-delay: 650ms;
+}
+
+.all-menu-cards .menu-card--6 {
+  -webkit-animation-delay: 780ms;
+          animation-delay: 780ms;
+}
+
+.all-menu-cards .menu-card--7 {
+  -webkit-animation-delay: 910ms;
+          animation-delay: 910ms;
+}
+
+.all-menu-cards .menu-card--8 {
+  -webkit-animation-delay: 1040ms;
+          animation-delay: 1040ms;
+}
+
+.all-menu-cards .menu-card--9 {
+  -webkit-animation-delay: 1170ms;
+          animation-delay: 1170ms;
+}
+
+.all-menu-cards .menu-card--10 {
+  -webkit-animation-delay: 1300ms;
+          animation-delay: 1300ms;
+}
+
+.all-menu-cards .menu-card:hover .menu-card__validation {
   width: 20%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
@@ -722,15 +761,15 @@ input:not(:focus):invalid {
           transform: scale(2) rotate(-1turn);
 }
 
-.all-menu-cards .menu-card:hover .card-text {
+.all-menu-cards .menu-card:hover .menu-card__text {
   width: calc(60%);
 }
 
-.all-menu-cards .menu-card:hover .card-price {
+.all-menu-cards .menu-card:hover .menu-card__price {
   width: calc(10%);
 }
 
-.all-menu-cards .menu-card .card-text {
+.all-menu-cards .menu-card .menu-card__text {
   width: calc(80%);
   height: inherit;
   display: -webkit-box;
@@ -750,7 +789,7 @@ input:not(:focus):invalid {
   overflow: hidden;
 }
 
-.all-menu-cards .menu-card .card-text h3 {
+.all-menu-cards .menu-card .menu-card__text h3 {
   padding-top: 0px;
   padding-bottom: 10px;
   white-space: nowrap;
@@ -759,7 +798,7 @@ input:not(:focus):invalid {
   overflow: hidden;
 }
 
-.all-menu-cards .menu-card .card-text p {
+.all-menu-cards .menu-card .menu-card__text p {
   margin: 0px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -767,7 +806,7 @@ input:not(:focus):invalid {
   overflow: hidden;
 }
 
-.all-menu-cards .menu-card .card-price {
+.all-menu-cards .menu-card .menu-card__price {
   height: 100%;
   width: calc(20%);
   display: -webkit-box;
@@ -783,11 +822,11 @@ input:not(:focus):invalid {
   padding-right: 15px;
 }
 
-.all-menu-cards .menu-card .card-price p {
+.all-menu-cards .menu-card .menu-card__price p {
   margin: 10px;
 }
 
-.all-menu-cards .menu-card .card-validation {
+.all-menu-cards .menu-card .menu-card__validation {
   color: #99E2D0;
   background-color: #99E2D0;
   display: -webkit-box;
@@ -812,7 +851,7 @@ input:not(:focus):invalid {
           transform-origin: right;
 }
 
-.all-menu-cards .menu-card .card-validation .fa-circle-check {
+.all-menu-cards .menu-card .menu-card__validation .fa-circle-check {
   color: #ffffff;
 }
 
@@ -915,6 +954,42 @@ input:not(:focus):invalid {
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes cards {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes cards {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
   }
 }
 
