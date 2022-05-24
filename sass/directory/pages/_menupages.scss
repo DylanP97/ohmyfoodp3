@@ -97,6 +97,7 @@
             .menu-card__validation {
             width: 20%;
             transform: scaleX(1);
+            border-radius: 0 20px 20px 0;
             }
     
             .fa-circle-check {
@@ -164,11 +165,10 @@
             align-items: center;
             width: 0%;
             height: inherit;
-            border-radius: 0 20px 20px 0;
             transform: scaleX(0);
             transition: transform 500ms;
             transform-origin: right;
-
+            z-index: -3;
         
             .fa-circle-check {
                 color: #ffffff;
