@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /* Variables */
-@use "sass:color";
 /* General */
 html {
   font-family: Roboto, Arial;
@@ -36,7 +35,7 @@ body {
 }
 
 .loader__item {
-  height: 100px;
+  height: 20px;
   width: 20px;
   border-radius: 100px;
 }
@@ -54,8 +53,8 @@ body {
   background-color: #9356DC;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: number1 1.5s linear;
-          animation: number1 1.5s linear;
+  -webkit-animation: number1 2s linear;
+          animation: number1 2s linear;
   opacity: 0;
 }
 
@@ -63,8 +62,8 @@ body {
   background-color: #FF79DA;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: number2 1s 0.5s linear;
-          animation: number2 1s 0.5s linear;
+  -webkit-animation: number2 1.5s 0.5s linear;
+          animation: number2 1.5s 0.5s linear;
   opacity: 0;
 }
 
@@ -72,8 +71,8 @@ body {
   background-color: #99E2D0;
   -webkit-transform-origin: top;
           transform-origin: top;
-  -webkit-animation: number3 0.5s 1s linear;
-          animation: number3 0.5s 1s linear;
+  -webkit-animation: number3 1s 1s linear;
+          animation: number3 1s 1s linear;
   opacity: 0;
 }
 
@@ -253,7 +252,6 @@ footer {
   margin-right: 4px;
 }
 
-@use "sass:color";
 /* Input Row */
 .input-row {
   display: -webkit-box;
@@ -568,8 +566,7 @@ input:not(:focus):invalid {
   .restaurants__all-cards {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 100%;
     justify-items: center;
   }
@@ -579,7 +576,6 @@ input:not(:focus):invalid {
   }
 }
 
-@use "sass:color";
 .logo-row__go-back {
   width: 25px;
   position: absolute;
@@ -750,6 +746,7 @@ input:not(:focus):invalid {
   width: 20%;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
+  border-radius: 0 20px 20px 0;
 }
 
 .all-menu-cards .menu-card:hover .fa-circle-check {
@@ -840,7 +837,6 @@ input:not(:focus):invalid {
           align-items: center;
   width: 0%;
   height: inherit;
-  border-radius: 0 20px 20px 0;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transition: -webkit-transform 500ms;
@@ -849,6 +845,7 @@ input:not(:focus):invalid {
   transition: transform 500ms, -webkit-transform 500ms;
   -webkit-transform-origin: right;
           transform-origin: right;
+  z-index: -3;
 }
 
 .all-menu-cards .menu-card .menu-card__validation .fa-circle-check {
@@ -895,39 +892,39 @@ input:not(:focus):invalid {
 
 @-webkit-keyframes heartfill {
   0% {
-    -webkit-transform: scale(0%);
-            transform: scale(0%);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   30% {
-    -webkit-transform: scale(30%);
-            transform: scale(30%);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   70% {
-    -webkit-transform: scale(70%);
-            transform: scale(70%);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   100% {
-    -webkit-transform: scale(100%);
-            transform: scale(100%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
 @keyframes heartfill {
   0% {
-    -webkit-transform: scale(0%);
-            transform: scale(0%);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   30% {
-    -webkit-transform: scale(30%);
-            transform: scale(30%);
+    -webkit-transform: scale(0.3);
+            transform: scale(0.3);
   }
   70% {
-    -webkit-transform: scale(70%);
-            transform: scale(70%);
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
   }
   100% {
-    -webkit-transform: scale(100%);
-            transform: scale(100%);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -1009,98 +1006,78 @@ input:not(:focus):invalid {
 
 @-webkit-keyframes number1 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
-  }
-  33% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
   }
 }
 
 @keyframes number1 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
-  }
-  33% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
     opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
   }
 }
 
 @-webkit-keyframes number2 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
-  }
-  66% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
     opacity: 1;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
   }
   100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
   }
 }
 
 @keyframes number2 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
-  }
-  66% {
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
     opacity: 1;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
   }
   100% {
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
   }
 }
 
 @-webkit-keyframes number3 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
   }
 }
 
 @keyframes number3 {
   0% {
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-    opacity: 0.5;
+    -webkit-transform: translateY(-70px);
+            transform: translateY(-70px);
+    opacity: 1;
   }
   100% {
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    -webkit-transform: translateY(40px);
+            transform: translateY(40px);
     opacity: 1;
   }
 }

@@ -28,7 +28,7 @@ body {
     animation-fill-mode: both;
   
     &__item {
-      height: 100px;
+      height: 20px;
       width: 20px;
       border-radius: 100px;
   
@@ -41,21 +41,21 @@ body {
       &--1 {
         background-color: $color-primary;
         transform-origin: top;
-        animation: number1 1.5s linear;
+        animation: number1 2s linear;
         opacity: 0;
       }
     
       &--2 {
         background-color: $color-secondary;
         transform-origin: top;
-        animation: number2 1s 0.5s linear;
+        animation: number2 1.5s 0.5s linear;
         opacity: 0;
       }
     
       &--3 {
         background-color: $color-tertiary;
         transform-origin: top;
-        animation: number3 0.5s 1s linear;
+        animation: number3 1s 1s linear;
         opacity: 0;
       }
     }

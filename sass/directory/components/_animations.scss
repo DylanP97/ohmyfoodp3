@@ -1,18 +1,18 @@
 @keyframes heartfill {
 0% {
-	transform: scale(0%);
+	transform: scale(0);
 }
 
 30% {
-	transform: scale(30%);
+	transform: scale(0.3);
 }
 
 70% {
-	transform: scale(70%);
+	transform: scale(0.7);
 }
 
 100% {
-	transform: scale(100%);
+	transform: scale(1);
 }
 }
 
@@ -58,48 +58,38 @@
 
 
 @keyframes number1 {
-0% {
-	transform: rotate(90deg);
-	opacity: 0.5;
-}
-
-33% {
-	transform: rotate(-90deg);
-	opacity: 1;
-}
-
-100% {
-	transform: rotate(-90deg);
-	opacity: 1;
-}
+	0% {
+		transform: translateY(-70px);
+		opacity: 1;
+	}
+	
+	100% {
+		transform: translateY(40px);
+		opacity: 1;
+	}
 }
 
 @keyframes number2 {
-0% {
-	transform: rotate(90deg);
-	opacity: 0.5;
-}
-
-66% {
-	opacity: 1;
-	transform: rotate(-90deg);
-}
-
-100% {
-	opacity: 1;
-	transform: rotate(-90deg);
-}
+	0% {
+		transform: translateY(-70px);
+		opacity: 1;
+	}
+	
+	100% {
+		transform: translateY(40px);
+		opacity: 1;
+	}
 }
 
 
 @keyframes number3 {
 0% {
-	transform: rotate(90deg);
-	opacity: 0.5;
+	transform: translateY(-70px);
+	opacity: 1;
 }
 
 100% {
-	transform: rotate(-90deg);
+	transform: translateY(40px);
 	opacity: 1;
 }
 }
